@@ -72,7 +72,7 @@ void SceneNode::Draw(Shader& shader, const glm::mat4& parentTransform) {
     }
 }
 
-// 新增的成员访问方法
+// 成员访问方法
 Material& SceneNode::GetMaterial() {
     return m_Material;
 }

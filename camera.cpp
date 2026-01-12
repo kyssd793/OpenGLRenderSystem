@@ -23,7 +23,7 @@ void Camera::ProcessKeyboard(float deltaTime) {
     if (glfwGetKey(m_Window, GLFW_KEY_D) == GLFW_PRESS)
         Position += glm::normalize(glm::cross(Front, Up)) * velocity;
    
-    // 新增QE垂直控制
+    // QE垂直控制
     if (glfwGetKey(m_Window, GLFW_KEY_E) == GLFW_PRESS)
         Position += glm::vec3(0.0f, 1.0f, 0.0f) * verticalVelocity;
     if (glfwGetKey(m_Window, GLFW_KEY_Q) == GLFW_PRESS)
@@ -41,7 +41,7 @@ void Camera::ProcessMouseMovement(float xoffset, float yoffset) {
 
     updateVectors();
 }
-// +++ 新增滚轮缩放处理 +++
+// 滚轮缩放处理
 void Camera::ProcessMouseScroll(float yoffset) {
     Zoom -= yoffset;
     if (Zoom < 1.0f) Zoom = 1.0f;

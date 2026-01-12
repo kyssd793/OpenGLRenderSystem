@@ -63,7 +63,7 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene) {
         else {
             vertex.TexCoords = glm::vec2(0.0f, 0.0f);
         }
-        // === 新增：切线数据 ===
+        // === 切线数据 ===
         if (mesh->HasTangentsAndBitangents()) {
             vertex.Tangent = glm::vec3(
                 mesh->mTangents[i].x,

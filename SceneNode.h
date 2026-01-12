@@ -4,7 +4,7 @@
 #include <glm/glm.hpp>
 #include "Model.h"
 // 添加四元数支持头文件 
-#include <glm/gtc/quaternion.hpp>  // 关键修复
+#include <glm/gtc/quaternion.hpp>  
 #include "Material.h"
 class SceneNode {
 public:

@@ -24,11 +24,11 @@ private:
     GLuint m_captureFBO;       // 帧缓冲对象
     GLuint m_captureRBO;       // 渲染缓冲对象
 
-    // 关键修复：使用vector存储视图矩阵（原数组会导致初始化问题）
+    // 使用vector存储视图矩阵（原数组会导致初始化问题）
     std::vector<glm::mat4> captureViews;
     glm::mat4 captureProjection = glm::perspective(glm::radians(90.0f), 1.0f, 0.1f, 10.0f);
 
-    // 新增辅助渲染方法
+    // 辅助渲染方法
     void RenderCube();
     void RenderQuad();
 

@@ -131,7 +131,7 @@ int main() {
     //secondSuit->GetMaterial().metallic = 0.7f;
     //secondSuit->GetMaterial().roughness = 0.3f;
     //secondSuit->GetMaterial().ao = 1.0f;
-        // 设置PBR材质参数（关键修改）
+        // 设置PBR材质参数
     Material& carMaterial = secondSuit->GetMaterial();
     carMaterial.type = Material::PBR;
     carMaterial.metallic = 0.7f;
@@ -314,7 +314,7 @@ int main() {
         pbrShader.setMat4("view", view);
         pbrShader.setVec3("viewPos", camera->Position);
 
-        // 绑定IBL贴图（关键新增）
+        // 绑定IBL贴图
         iblSystem->BindIrradianceMap(GL_TEXTURE10);
         pbrShader.setInt("irradianceMap", 10);
         iblSystem->BindPrefilterMap(GL_TEXTURE11);
